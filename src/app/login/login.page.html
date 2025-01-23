@@ -11,10 +11,12 @@
     </ion-toolbar>
   </ion-header>
   <ion-item>
-    <ion-input label="Floating label" labelPlacement="floating" placeholder="Enter text"></ion-input>
+    <ion-input [(ngModel)]="email" label="Correo electronico" labelPlacement="floating"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input label="Stacked label" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+    <ion-input [(ngModel)]="password" label="Contraseña" labelPlacement="stacked"></ion-input>
   </ion-item>
-  <ion-button routerLink="/home">Custom Button</ion-button>
+  <ion-button (click)="login()">
+    Iniciar sesion
+  </ion-button>
 </ion-content>
