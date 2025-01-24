@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form #frmingreso="ngForm" (ngSubmit)="registro(frmingreso)">
+    <ion-list>
+      <ion-item>
+        <ion-input name="nombreYApellido" [(ngModel)]="nombre" label="Nombre y apellido" labelPlacement="floating" ></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input name="ciudad" [(ngModel)]="ciudad" label="Ciudad" labelPlacement="floating" ></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input name="pais" [(ngModel)]="pais" label="Pais" labelPlacement="floating" ></ion-input>
+      </ion-item>
+    
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-input
+         name="email" [(ngModel)]="email"
+          label="Direccion de correo electrinico"
+          labelPlacement="stacked"
+          [clearInput]="true"
+          placeholder="Enter text to see clear button"
+          value="example@gmail.com"
+        >
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input
+        name="password" [(ngModel)]="password"
+        type="password"
+          label="Ingrese una contraseña"
+          labelPlacement="stacked"
+          [clearOnEdit]="true"
+          placeholder="*********"
+        >
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input
+        name="password" [(ngModel)]="password"
+          type="password"
+          label="Compruebe su cotraseña"
+          labelPlacement="stacked"
+          type="password"
+          placeholder="*********"
+        >
+        </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit">
+      Regsitrarse
+    </ion-button>
+  </form>
+</ion-content>

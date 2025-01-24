@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'range',
     loadChildren: () => import('./range/range.module').then( m => m.RangePageModule)
   },
+  {
+    path: 'registrer',
+    loadChildren: () => import('./registrer/registrer.module').then( m => m.RegistrerPageModule)
+  },
 ];
 
 @NgModule({
