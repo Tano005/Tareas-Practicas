@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab3Page {
+  chats: any[] =[
+    {
+      username: "Abuelita",
+      message: "↗ Hoy, 3:48p. m.",
+      avatarUrl: "https://ionicframework.com/docs/img/demos/avatar.svg"
+    },
+  ]
 
   constructor() {}
 

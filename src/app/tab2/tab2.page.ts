@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -6,8 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss'],
   standalone: false,
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit{
+  chats: any[] =[
+    {
+      username: "Mi estado",
+      message: "añade actualizacion",
+      avatarUrl: "https://ionicframework.com/docs/img/demos/avatar.svg"
+    },
+  ]
 
-  constructor() {}
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 }
